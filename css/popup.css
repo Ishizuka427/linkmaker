@@ -1,0 +1,21 @@
+body {
+    width: 400px;
+    margin: 10px;
+    background-color: #fff;
+    min-width: 357px;
+    overflow-x: hidden;
+    font-family: "Helvetica Neue",Helvetica,"Hiragino Kaku Gothic Pro","Lucida Grande",Verdana,Arial,Meiryo,"メイリオ",sans-serif;
+}
+
+p {
+    display: inline;
+    height: 5px;
+}
+
+img {
+    margin: 5px;
+    border: 2px solid black;
+    vertical-align: middle;
+    width: 75px;
+    height: 75px;
+}

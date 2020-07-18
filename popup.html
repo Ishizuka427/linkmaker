@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Link Maker</title>
+        <link rel="stylesheet" href="css/popup.css" type="text/css">
+    </head>
+    <body>
+        [<p id="title"></p>](<p id="url"></p>)
+
+        <!-- コピー対象要素とコピーボタン -->
+        <br><br>
+        <input id="copyTarget" type="text" value="" readonly>
+        <button onclick="copyToClipboard()">Copy text</button>
+
+        <!-- Load JavaScript-->
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/popup.js"></script>
+
+        <script>
+         function copyToClipboard() {
+             // コピー対象をJavaScript上で変数として定義する
+             var copyTarget = document.getElementById("copyTarget");
+
+             // コピー対象のテキストを選択する
+             copyTarget.select();
+
+             // 選択しているテキストをクリップボードにコピーする
+             document.execCommand("Copy");
+
+             // コピーをお知らせする
+             alert("コピーできました！ : " + copyTarget.value);
+         }
+        </script>
+    </body>
+</html>
